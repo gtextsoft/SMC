@@ -30,7 +30,11 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .logo {
+h1,
+h2,
+h3,
+h4,
+.logo {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
 }
@@ -53,12 +57,29 @@ h1, h2, h3, h4, .logo {
     padding: 100px 0;
 }
 
-.mb-20 { margin-bottom: 20px; }
-.mb-30 { margin-bottom: 30px; }
-.mb-40 { margin-bottom: 40px; }
-.mb-60 { margin-bottom: 60px; }
-.mt-20 { margin-top: 20px; }
-.mt-60 { margin-top: 60px; }
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
 
 /* Buttons */
 .btn {
@@ -418,7 +439,7 @@ header nav {
 .rounded-img {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Audience Section */
@@ -605,33 +626,35 @@ header nav {
 
 /* Responsive */
 @media (max-width: 992px) {
-    .grid-2, .details-box {
+
+    .grid-2,
+    .details-box {
         grid-template-columns: 1fr;
     }
-    
+
     .details-box {
         border-radius: 12px;
     }
-    
+
     .call-to-action-card {
         border-left: none;
         border-top: 1px solid rgba(197, 160, 89, 0.1);
         padding: 40px;
     }
-    
+
     .details-text {
         padding: 40px;
     }
-    
+
     .hero-info {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .nav-links {
         display: none;
     }
-    
+
     .mobile-menu-btn {
         display: block;
     }
@@ -641,21 +664,121 @@ header nav {
     .section-padding {
         padding: 60px 0;
     }
-    
+
     .hero h1 {
         font-size: 2.2rem;
     }
-    
+
     .hero-cta {
         flex-direction: column;
     }
-    
+
     .countdown-timer {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .countdown-box {
         flex: 1 1 40%;
+    }
+}
+
+/* MailerLite Form Premium Styling */
+.ml-form-embedContainer {
+    width: 100% !important;
+}
+
+.ml-form-embedWrapper {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.ml-form-embedBody {
+    padding: 0 !important;
+}
+
+.ml-form-embedContent h3 {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+}
+
+.ml-form-embedContent p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.ml-form-fieldRow {
+    margin-bottom: 20px !important;
+}
+
+.ml-form-fieldRow input {
+    background-color: var(--primary-light) !important;
+    color: var(--text-white) !important;
+    border: 1px solid rgba(197, 160, 89, 0.2) !important;
+    padding: 16px 20px !important;
+    border-radius: 8px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1rem !important;
+    transition: var(--transition) !important;
+    width: 100% !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ml-form-fieldRow input:focus {
+    border-color: var(--gold) !important;
+    background-color: rgba(23, 42, 70, 0.9) !important;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+}
+
+.ml-form-embedSubmit button {
+    background-color: var(--gold) !important;
+    color: var(--primary) !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 18px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: var(--transition) !important;
+    width: 100% !important;
+    box-shadow: 0 10px 20px -10px rgba(197, 160, 89, 0.4) !important;
+}
+
+.ml-form-embedSubmit button:hover {
+    background-color: var(--gold-hover) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -10px rgba(197, 160, 89, 0.5) !important;
+}
+
+.ml-form-successBody {
+    background: rgba(197, 160, 89, 0.05);
+    padding: 40px !important;
+    border-radius: 12px;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    text-align: center;
+}
+
+.ml-form-successContent h4 {
+    color: var(--gold) !important;
+    font-size: 2rem !important;
+    margin-bottom: 10px !important;
+}
+
+.ml-form-successContent p {
+    color: var(--text-white) !important;
+    font-size: 1.1rem !important;
+}
+
+.ml-form-embedSubmitLoad:after {
+    border-color: var(--primary) var(--primary) var(--primary) transparent !important;
+}
+
+@media (max-width: 992px) {
+    .ml-form-embedContent h3 {
+        font-size: 1.5rem;
     }
 }
