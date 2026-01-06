@@ -1,0 +1,102 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile Menu Toggle (Simplified)
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    mobileMenuBtn.addEventListener('click', () => {
+        alert('Mobile menu functionality would go here.');
+    });
+
+    // Countdown Timer
+    const countdownDate = new Date('January 27, 2026 08:00:00').getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const countdownElement = document.getElementById('countdown');
+        if (countdownElement) {
+            countdownElement.innerHTML = `
+                <div class="countdown-box">
+                    <span class="countdown-number">${days}</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number">${hours}</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number">${minutes}</span>
+                    <span class="countdown-label">Min</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number">${seconds}</span>
+                    <span class="countdown-label">Sec</span>
+                </div>
+            `;
+        }
+
+        if (distance < 0) {
+            clearInterval(timerInterval);
+            countdownElement.innerHTML = "MASTERCLASS HAS STARTED";
+        }
+    }
+
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    function reveal() {
+        for (let i = 0; i < revealElements.length; i++) {
+            const windowHeight = window.innerHeight;
+            const elementTop = revealElements[i].getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < windowHeight - elementVisible) {
+                revealElements[i].classList.add('active');
+            }
+        }
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal(); // Initial check
+
+    // Form Submission (Demo)
+    const form = document.getElementById('register');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for registering! We will contact you soon with further details.');
+            form.reset();
+        });
+    }
+
+    // Smooth Scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
