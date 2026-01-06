@@ -9,10 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile Menu Toggle (Simplified)
+    // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
     mobileMenuBtn.addEventListener('click', () => {
-        alert('Mobile menu functionality would go here.');
+        navLinks.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+            icon.setAttribute('data-lucide', 'x');
+        } else {
+            icon.setAttribute('data-lucide', 'menu');
+        }
+        lucide.createIcons();
+    });
+
+    // Close menu when clicking links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.setAttribute('data-lucide', 'menu');
+            lucide.createIcons();
+        });
     });
 
     // Countdown Timer
@@ -60,13 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     function reveal() {
         for (let i = 0; i < revealElements.length; i++) {
             const windowHeight = window.innerHeight;
             const elementTop = revealElements[i].getBoundingClientRect().top;
             const elementVisible = 150;
-            
+
             if (elementTop < windowHeight - elementVisible) {
                 revealElements[i].classList.add('active');
             }

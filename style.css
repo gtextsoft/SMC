@@ -186,6 +186,27 @@ header nav {
     color: var(--gold);
 }
 
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        padding: 40px 20px;
+        gap: 20px;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -639,11 +660,6 @@ header nav {
     .call-to-action-card {
         border-left: none;
         border-top: 1px solid rgba(197, 160, 89, 0.1);
-        padding: 40px;
-    }
-
-    .details-text {
-        padding: 40px;
     }
 
     .hero-info {
@@ -660,26 +676,92 @@ header nav {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    :root {
+        --header-height: 70px;
+    }
+
     .section-padding {
         padding: 60px 0;
     }
 
-    .hero h1 {
-        font-size: 2.2rem;
+    .section-title {
+        font-size: 2rem;
     }
 
-    .hero-cta {
-        flex-direction: column;
+    .hero {
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    .hero-info {
+        gap: 12px;
     }
 
     .countdown-timer {
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 10px;
     }
 
     .countdown-box {
-        flex: 1 1 40%;
+        padding: 10px;
+        min-width: 70px;
+    }
+
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+
+    .grid-2 {
+        gap: 40px;
+    }
+
+    .intro-text .lead {
+        font-size: 1.1rem;
+    }
+
+    .quote-box {
+        padding: 20px;
+    }
+
+    .highlight-text {
+        font-size: 1.25rem;
+    }
+
+    .details-text {
+        padding: 30px 20px;
+    }
+
+    .call-to-action-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-cta {
+        width: 100%;
+    }
+
+    .btn-large {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    .countdown-timer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
