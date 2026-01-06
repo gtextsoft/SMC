@@ -13,6 +13,75 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        @import url("https://assets.mlcdn.com/fonts.css?version=1767598");
+    </style>
+    <style type="text/css">
+        /* MailerLite Form Overrides to match premium theme */
+        #mlb2-35385063.ml-form-embedContainer {
+            width: 100% !important;
+            margin: 0 !important;
+        }
+
+        #mlb2-35385063.ml-form-embedContainer .ml-form-embedWrapper {
+            background-color: transparent !important;
+            border: none !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        #mlb2-35385063.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+        #mlb2-35385063.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p {
+            display: none;
+            /* We use our own headings */
+        }
+
+        #mlb2-35385063.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+            background-color: var(--primary-light) !important;
+            color: var(--text-white) !important;
+            border: 1px solid rgba(197, 160, 89, 0.2) !important;
+            padding: 14px 18px !important;
+            border-radius: 4px !important;
+            font-family: 'Inter', sans-serif !important;
+            height: auto !important;
+        }
+
+        #mlb2-35385063.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:focus {
+            border-color: var(--gold) !important;
+        }
+
+        #mlb2-35385063.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+            background-color: var(--gold) !important;
+            color: var(--primary) !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition) !important;
+            padding: 16px !important;
+            border: none !important;
+        }
+
+        #mlb2-35385063.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+            background-color: var(--gold-hover) !important;
+            transform: translateY(-2px);
+        }
+
+        /* Success Message Styling */
+        #mlb2-35385063.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+            color: var(--gold) !important;
+            font-family: 'Outfit', sans-serif !important;
+        }
+
+        #mlb2-35385063.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+            color: var(--text-white) !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .ml-form-embedSubmitLoad:after {
+            border-color: var(--primary) var(--primary) var(--primary) transparent !important;
+        }
+    </style>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
@@ -227,14 +296,71 @@
                         </div>
                     </div>
                     <div class="call-to-action-card">
-                        <h3>Reserve Your Spot</h3>
-                        <p>Secure your seat and be part of this focused learning experience.</p>
-                        <form id="register" class="registration-form">
-                            <input type="text" placeholder="Full Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                            <input type="tel" placeholder="Phone Number" required>
-                            <button type="submit" class="btn btn-gold btn-full">Register Now</button>
-                        </form>
+                        <div id="mlb2-35385063"
+                            class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-35385063">
+                            <div class="ml-form-align-center ">
+                                <div class="ml-form-embedWrapper embedForm">
+                                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                        <div class="ml-form-embedContent">
+                                            <h3>Reserve Your Spot</h3>
+                                            <p>Secure your seat and be part of this focused learning experience.</p>
+                                        </div>
+                                        <form class="ml-block-form"
+                                            action="https://assets.mailerlite.com/jsonp/1684141/forms/175841467534673380/subscribe"
+                                            data-code="" method="post" target="_blank">
+                                            <div class="ml-form-formContent">
+                                                <div class="ml-form-fieldRow ">
+                                                    <div class="ml-field-group ml-field-name ml-validate-required">
+                                                        <input aria-label="name" aria-required="true" type="text"
+                                                            class="form-control" name="fields[name]"
+                                                            placeholder="Full Name" autocomplete="given-name">
+                                                    </div>
+                                                </div>
+                                                <div class="ml-form-fieldRow ">
+                                                    <div
+                                                        class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                        <input aria-label="email" aria-required="true" type="email"
+                                                            class="form-control" name="fields[email]"
+                                                            placeholder="Email Address" autocomplete="email">
+                                                    </div>
+                                                </div>
+                                                <div class="ml-form-fieldRow ">
+                                                    <div class="ml-field-group ml-field-company ml-validate-required">
+                                                        <input aria-label="company" aria-required="true" type="text"
+                                                            class="form-control" name="fields[company]"
+                                                            placeholder="Company/Business Name" autocomplete="">
+                                                    </div>
+                                                </div>
+                                                <div class="ml-form-fieldRow ml-last-item">
+                                                    <div class="ml-field-group ml-field-phone ml-validate-required">
+                                                        <input aria-label="phone" aria-required="true" type="text"
+                                                            class="form-control" name="fields[phone]"
+                                                            placeholder="Phone Number" autocomplete="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="ml-submit" value="1">
+                                            <div class="ml-form-embedSubmit">
+                                                <button type="submit" class="primary btn-full">Register Now</button>
+                                                <button disabled="disabled" style="display: none;" type="button"
+                                                    class="loading">
+                                                    <div class="ml-form-embedSubmitLoad"></div>
+                                                    <span class="sr-only">Loading...</span>
+                                                </button>
+                                            </div>
+                                            <input type="hidden" name="anticsrf" value="true">
+                                        </form>
+                                    </div>
+                                    <div class="ml-form-successBody row-success" style="display: none">
+                                        <div class="ml-form-successContent">
+                                            <h4>Thank you!</h4>
+                                            <p>You have successfully registered for the masterclass. We will contact you
+                                                soon.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -259,6 +385,17 @@
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
+
+        function ml_webform_success_35385063() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-35385063 .row-success').show();
+            $('.ml-subscribe-form-35385063 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/1684141/forms/175841467534673380/takel")
     </script>
 </body>
 
