@@ -95,24 +95,20 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', reveal);
     reveal(); // Initial check
 
-    // Form Submission (Demo)
-    const form = document.getElementById('register');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for registering! We will contact you soon with further details.');
-            form.reset();
-        });
-    }
+    // Form submission is handled by MailerLite
 
     // Smooth Scrolling for all links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            const target = document.querySelector(href);
             if (target) {
+                const headerHeight = document.getElementById('header')?.offsetHeight || 80;
+                // Use getBoundingClientRect for accurate position of nested elements
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
                 window.scrollTo({
-                    top: target.offsetTop - 80,
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
             }
