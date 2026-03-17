@@ -313,14 +313,14 @@
                                             <h3>Reserve Your Spot</h3>
                                             <p>Secure your seat for SMBO — Saturday, 25th April 2026 at Oriental Hotel Lagos or join virtually. Or register directly at <a href="https://www.stephenakintayo.com/salesmasterclass" target="_blank" rel="noopener">stephenakintayo.com/salesmasterclass</a>.</p>
                                         </div>
-                                        <form class="ml-block-form" id="register-form"
-                                            action="https://assets.mailerlite.com/jsonp/1684141/forms/175841467534673380/subscribe"
-                                            data-code="" method="post" target="_blank">
+                                        <form id="register-form"
+                                            action="https://formspree.io/f/xyknbwzn"
+                                            method="post">
                                             <div class="ml-form-formContent">
                                                 <div class="ml-form-fieldRow ">
                                                     <div class="ml-field-group ml-field-name ml-validate-required">
                                                         <input aria-label="name" aria-required="true" type="text"
-                                                            class="form-control" name="fields[name]"
+                                                            class="form-control" name="name"
                                                             placeholder="Full Name" autocomplete="given-name">
                                                     </div>
                                                 </div>
@@ -328,43 +328,29 @@
                                                     <div
                                                         class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
                                                         <input aria-label="email" aria-required="true" type="email"
-                                                            class="form-control" name="fields[email]"
+                                                            class="form-control" name="email"
                                                             placeholder="Email Address" autocomplete="email">
                                                     </div>
                                                 </div>
                                                 <div class="ml-form-fieldRow ">
                                                     <div class="ml-field-group ml-field-company ml-validate-required">
                                                         <input aria-label="company" aria-required="true" type="text"
-                                                            class="form-control" name="fields[company]"
+                                                            class="form-control" name="company"
                                                             placeholder="Company/Business Name" autocomplete="">
                                                     </div>
                                                 </div>
                                                 <div class="ml-form-fieldRow ml-last-item">
                                                     <div class="ml-field-group ml-field-phone ml-validate-required">
                                                         <input aria-label="phone" aria-required="true" type="text"
-                                                            class="form-control" name="fields[phone]"
+                                                            class="form-control" name="phone"
                                                             placeholder="Phone Number" autocomplete="">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <input type="hidden" name="ml-submit" value="1">
                                             <div class="ml-form-embedSubmit">
                                                 <button type="submit" class="primary btn-full">Register Now</button>
-                                                <button disabled="disabled" style="display: none;" type="button"
-                                                    class="loading">
-                                                    <div class="ml-form-embedSubmitLoad"></div>
-                                                    <span class="sr-only">Loading...</span>
-                                                </button>
                                             </div>
-                                            <input type="hidden" name="anticsrf" value="true">
                                         </form>
-                                    </div>
-                                    <div class="ml-form-successBody row-success" style="display: none">
-                                        <div class="ml-form-successContent">
-                                            <h4>Thank you!</h4>
-                                            <p>You have successfully registered for the masterclass. We will contact you
-                                                soon.</p>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -395,17 +381,6 @@
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
-
-        function ml_webform_success_35385063() {
-            var $ = ml_jQuery || jQuery;
-            $('.ml-subscribe-form-35385063 .row-success').show();
-            $('.ml-subscribe-form-35385063 .row-form').hide();
-        }
-    </script>
-    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
-        type="text/javascript"></script>
-    <script>
-        fetch("https://assets.mailerlite.com/jsonp/1684141/forms/175841467534673380/takel")
     </script>
 </body>
 
