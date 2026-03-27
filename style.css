@@ -522,9 +522,9 @@ header nav {
 /* Tickets Section */
 .tickets-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
-    max-width: 860px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -576,6 +576,44 @@ header nav {
 
 .ticket-header {
     text-align: center;
+}
+
+.ticket-old-price {
+    margin: 4px 0 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.old-price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-gray);
+}
+
+.old-price-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: rgba(230, 241, 255, 0.7);
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(230, 241, 255, 0.55);
+}
+
+.ticket-discount {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: rgba(100, 255, 218, 0.14);
+    color: var(--accent-blue);
+    border: 1px solid rgba(100, 255, 218, 0.35);
 }
 
 .ticket-badge {
@@ -1077,6 +1115,7 @@ header nav {
 
     /* Tickets */
     .tickets-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         max-width: 680px;
     }
 
